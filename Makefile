@@ -1,8 +1,13 @@
-.PHONY: build all run
-all: build
+MAKEFLAGS += --silent
+.PHONY: clean compile init run
+run: compile
+	build/snake
 
-build:
+compile:
 	cmake --build build
 
-run: build
-	build/snake
+clean:
+	rm -rf build
+
+init:
+	mkdir -p build && cmake -S . -B build

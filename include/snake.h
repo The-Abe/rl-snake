@@ -23,11 +23,11 @@ public:
   static Snake initialize_snake();
 
   // Draw the snake to the screen
-  void draw_snake();
+  void draw();
 
   // Move the snake in the current direction if enough time has passed
   // Can be called every frame, but will only move the snake at a set interval
-  void move_snake(GameState &gs, int time);
+  void move(GameState &gs, int time);
 
   // Detect if the snake has collided with itself or the walls
   // Collision with food is handled in food.h

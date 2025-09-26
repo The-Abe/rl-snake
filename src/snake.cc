@@ -18,7 +18,7 @@ Snake Snake::initialize_snake() {
   return snake;
 }
 
-void Snake::draw_snake() {
+void Snake::draw() {
   for (int i = 0; i < this->length; i++) {
     Color color = (i == 0) ? DARKGREEN : GREEN;
     DrawRectangle(18 + this->segments[i].x * grid_size,
@@ -27,7 +27,7 @@ void Snake::draw_snake() {
   }
 }
 
-void Snake::move_snake(GameState &gs, int time) {
+void Snake::move(GameState &gs, int time) {
   if (gs.pause)
     return;
 

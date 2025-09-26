@@ -21,7 +21,7 @@ void GameState::run_game() {
     // GetTime returns time in seconds, convert to milliseconds
     int time = static_cast<int>(GetTime() * 1000);
     Input::process_input(gs);
-    gs.snake.move_snake(gs, time);
+    gs.snake.move(gs, time);
     gs.snake.detect_collision(gs);
     Food::detect_eating(gs);
 
@@ -34,8 +34,8 @@ void GameState::run_game() {
     UI::draw_grid();
 
     UI::draw_cross(gs.snake);
-    gs.snake.draw_snake();
-    Food::draw_food(gs);
+    gs.snake.draw();
+    Food::draw(gs);
 
     if (gs.pause)
       UI::draw_pause();

@@ -9,7 +9,7 @@
 
 namespace snake {
 
-void Food::draw_food(GameState &gs) {
+void Food::draw(GameState &gs) {
   for (const auto &food : gs.foods) {
     DrawRectangle(18 + food.x * grid_size, 50 + food.y * grid_size, grid_size,
                   grid_size, RED);

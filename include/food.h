@@ -11,7 +11,7 @@ public:
   int y;
 
   // Draw all food items on the screen.
-  static void draw_food(GameState &gs);
+  static void draw(GameState &gs);
 
   // Detect if the snake has eaten any food.
   // Spawn new food and increase snake length if so.

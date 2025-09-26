@@ -20,7 +20,7 @@ void GameState::run_game() {
   while (!WindowShouldClose()) {
     // GetTime returns time in seconds, convert to milliseconds
     int time = static_cast<int>(GetTime() * 1000);
-    Input::process_input(gs);
+    Input::process(gs);
     gs.snake.move(gs, time);
     gs.snake.detect_collision(gs);
     Food::detect_eating(gs);

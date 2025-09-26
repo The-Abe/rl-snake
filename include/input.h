@@ -22,6 +22,6 @@ public:
   static Direction opposite(Direction dir);
 
   // Processes input and updates the game state accordingly.
-  static void process_input(GameState &gs);
+  static void process(GameState &gs);
 };
 } // namespace snake

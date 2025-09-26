@@ -44,7 +44,7 @@ Direction Input::opposite(Direction dir) {
   }
 }
 
-void Input::process_input(GameState &gs) {
+void Input::process(GameState &gs) {
   // Allow only one input per movement
   // move_snake will reset this flag
   if (gs.processed_input)

@@ -27,6 +27,9 @@ void Food::detect_eating(GameState &gs) {
       
       gs.foods.erase(gs.foods.begin() + i);
       gs.foods.push_back(gs.spawn_food());
+      if (gs.snake.length % 10 == 0) {
+        gs.foods.push_back(gs.spawn_food());
+      }
     }
   }
 }

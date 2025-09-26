@@ -17,7 +17,6 @@ public:
   int score = 0;
   int last_time = 0; // To control if the state should update yet
   Snake snake;
-  // TODO: Spawn multiple foods for certain modes/events/scores
   std::vector<Food> foods{};
 
   // Initialize the game and run the game loop.
